@@ -1,0 +1,29 @@
+# Typically this file contains two properties:
+
+# -- location of the configuration server (spring.cloud.config.uri)
+# -- name of the application (spring.application.name)
+#
+# font: https://code.i-harness.com/en/q/1f77fe8
+
+spring:
+  application:
+    name: bo-users
+  cloud:
+    config:
+      #If want remote config, change for true value.
+      enabled: false
+      #The label represents a branch from git repository.
+      label: local
+      discovery:
+        enabled: false
+        serviceId: bo-configuration
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7800/eureka/
+    #  defaultZone: http://localhost:7700/eureka/
+    #enabled: false
+  instance:
+    appname: ${spring.application.name}
