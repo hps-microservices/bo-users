@@ -10,20 +10,12 @@ spring:
     name: bo-users
   cloud:
     config:
-      #If want remote config, change for true value.
-      enabled: false
-      #The label represents a branch from git repository.
-      label: local
-      discovery:
-        enabled: false
-        serviceId: bo-configuration
-
+      enabled: false  #If want remote config, change for true value.
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:7800/eureka/
-    #  defaultZone: http://localhost:7700/eureka/
-    #enabled: false
+    enabled: false # disable connection with eureka server...
   instance:
     appname: ${spring.application.name}
