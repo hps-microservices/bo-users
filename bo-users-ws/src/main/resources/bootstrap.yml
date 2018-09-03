@@ -1,0 +1,21 @@
+# Typically this file contains two properties:
+
+# -- location of the configuration server (spring.cloud.config.uri)
+# -- name of the application (spring.application.name)
+#
+# font: https://code.i-harness.com/en/q/1f77fe8
+
+spring:
+  application:
+    name: bo-users
+  cloud:
+    config:
+      enabled: false  #If want remote config, change for true value.
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7800/eureka/
+    enabled: false # disable connection with eureka server...
+  instance:
+    appname: ${spring.application.name}

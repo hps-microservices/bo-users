@@ -5,19 +5,22 @@
 
 	<groupId>com.msvvdv</groupId>
 	<artifactId>bo-users</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
-
 	<name>bo-users</name>
 	<description>Box-Office users project</description>
-
+	<!-- Use with bo-common project -->
+	<!--<parent>-->
+		<!--<groupId>com.msvvdv</groupId>-->
+		<!--<artifactId>bo-common-parent</artifactId>-->
+		<!--<version>1.0</version>-->
+	<!--</parent>-->
 	<parent>
-		<groupId>com.msvvdv</groupId>
-		<artifactId>bo-common-parent</artifactId>
-		<version>1.0</version>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.4.RELEASE</version>
+		<relativePath/><!-- lookup parent from repository -->
 	</parent>
-
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -32,39 +35,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.apache.tomcat.embed</groupId>
-					<artifactId>tomcat-embed-el</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-undertow</artifactId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -96,18 +74,19 @@
 			</plugin>
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
-		</repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
-		</repository>
-	</distributionManagement>
+	<!--  Use with bo-common project-->
+	<!--<repositories>-->
+		<!--<repository>-->
+			<!--<id>nexus</id>-->
+			<!--<name>nexus</name>-->
+			<!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+		<!--</repository>-->
+	<!--</repositories>-->
+	<!--<distributionManagement>-->
+		<!--<repository>-->
+			<!--<id>nexus</id>-->
+			<!--<name>nexus</name>-->
+			<!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+		<!--</repository>-->
+	<!--</distributionManagement>-->
 </project>

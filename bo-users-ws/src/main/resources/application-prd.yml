@@ -1,0 +1,9 @@
+bo-users:
+  display-name: bo-users
+
+info:
+  name: ${bo-users.display-name}
+  #version: @project.version@
+
+server:
+  port: 7900
