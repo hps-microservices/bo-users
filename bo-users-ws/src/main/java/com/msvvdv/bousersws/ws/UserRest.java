@@ -18,5 +18,7 @@ public class UserRest {
     private UserService userService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void save(@RequestBody  User user){}
+    public void save(@RequestBody  User user){
+        userService.save(user);
+    }
 }
