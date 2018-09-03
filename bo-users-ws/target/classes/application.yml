@@ -3,7 +3,7 @@ bo-users:
 
 info:
   name: ${bo-users.display-name}
-#  version: @project.version@
+#  version: 1.0
 
 server:
   port: 7900
