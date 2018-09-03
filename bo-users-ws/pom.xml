@@ -14,17 +14,17 @@
         <version>1.0</version>
     </parent>
     <dependencies>
+        <!-- Box Office Dependencies...-->
         <dependency>
             <groupId>com.msvvdv</groupId>
             <artifactId>bo-users-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-
+        <!-- Spring Dependencies...-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -60,7 +60,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.7.0</version>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>

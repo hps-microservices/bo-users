@@ -11,4 +11,6 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://mongo_bo_users:123@localhost:27017/bo-users
+      host: localhost
+      port: 27017
+      database: bo-users
