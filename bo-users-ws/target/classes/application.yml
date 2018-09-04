@@ -1,5 +1,5 @@
 bo-users:
-  display-name: bo-users
+  display-name: ${spring.application.name}
 
 info:
   name: ${bo-users.display-name}

@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-public class BoUsersWsApplication {
+public class Application {
     public static void main(String[] args) {
         new SpringApplicationBuilder(
-                BoUsersWsApplication.class,
+                Application.class,
                 ModuleConfiguration.class,
                 MongoConfiguration.class
         ).run(args);
