@@ -12,7 +12,6 @@
 		<module>bo-users-core</module>
 		<module>bo-users-ws</module>
 	</modules>
-
 	<!-- Use with bo-common project -->
 	<!--<parent>-->
 		<!--<groupId>com.msvvdv</groupId>-->
